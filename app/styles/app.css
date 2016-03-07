@@ -1,0 +1,21 @@
+.filter-select {
+  border: 1px solid red;
+}
+
+.filter-select.is-focused {
+  background: #ffffcc;
+}
+
+.filter-select-input {
+  margin: 10px;
+}
+
+.filter-select-options {
+  border: 1px solid blue;
+  margin: 10px;
+  display: none;
+}
+
+.filter-select.is-open .filter-select-options {
+  display: block;
+}

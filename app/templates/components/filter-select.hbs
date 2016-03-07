@@ -1,0 +1,15 @@
+{{#select-box
+  value=attrs.value
+  on-search=attrs.on-search
+  on-select=attrs.on-select
+  on-focus-in=(action 'reveal')
+  on-focus-out=(action 'close')
+  on-click-outside=(action 'close')
+  on-searched=(action 'searched')
+  search-min-chars=0
+  class-prefix='filter-select' as |sb|}}
+  {{sb.input}} {{if sb.isSearching 'please wait...'}}
+  {{#sb.options}}
+    {{yield sb results}}
+  {{/sb.options}}
+{{/select-box}}
