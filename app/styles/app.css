@@ -3,7 +3,7 @@
 }
 
 .filter-select.is-focused {
-  background: #ffffcc;
+  background: #ffc;
 }
 
 .filter-select-input {
@@ -18,4 +18,8 @@
 
 .filter-select.is-open .filter-select-options {
   display: block;
+}
+
+.filter-select-option.is-active {
+  background: #fcc;
 }

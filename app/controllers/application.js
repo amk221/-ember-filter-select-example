@@ -29,6 +29,10 @@ export default Ember.Controller.extend({
           }));
         }, delay());
       });
+    },
+
+    selectABread(bread) {
+      this.set('selectedBread', bread);
     }
   }
 });

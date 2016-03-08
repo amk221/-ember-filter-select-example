@@ -1,6 +1,10 @@
 <h1>filter select example</h1>
 
-{{#filter-select on-search=(action 'findResults') as |sb results|}}
+<p>
+  Selected bread: {{selectedBread.name}}
+</p>
+
+{{#filter-select on-search=(action 'findResults') on-select=(action 'selectABread') as |sb results|}}
   {{#each results as |result|}}
     {{sb.option value=result label=result.name}}
   {{/each}}

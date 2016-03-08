@@ -2,6 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
+    selected(select, value, sb) {
+      select(value);
+      sb.close();
+    },
     searched(results, query, sb) {
       this.set('results', results);
       this.set('lastQuery', query);
@@ -12,6 +16,9 @@ export default Ember.Component.extend({
     },
     close(e, sb) {
       sb.close();
+    },
+    prevent(e) {
+      e.preventDefault();
     }
   }
 });
